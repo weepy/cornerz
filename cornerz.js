@@ -127,7 +127,7 @@ CHANGELIST from  v0.4
 
       if($.browser.msie) {//need to use innerHTML rather than jQuery
         h = vmlCorners(cs,r,bw,bc,bg, $(this).width() );     
-        this.innerHTML += h;
+        this.insertAdjacentHTML('beforeEnd', h);
         
       }
       else  //canvasCorners returns a DOM element
