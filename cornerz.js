@@ -64,7 +64,7 @@ CHANGELIST from  v0.4
     function vmlCurve(r,b,c,m,ml,mt, right_fix) {
         var l = m-ml-right_fix;
         var t = m-mt;
-        return "<v:arc filled='False' strokeweight='"+b+"px' strokecolor='"+c+"' startangle='0' endangle='361' style=' top:" + t +"px;left: "+ l + ";width:" + r+ "px; height:" + r+ "px' />";
+        return "<v:arc filled='False' strokeweight='"+b+"px' strokecolor='"+c+"' startangle='0' endangle='361' style=' top:" + t +"px;left: "+ l + "px;width:" + r+ "px; height:" + r+ "px' />";
     }
     
 
