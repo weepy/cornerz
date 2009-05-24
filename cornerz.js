@@ -23,7 +23,7 @@ CHANGELIST from  v0.4
   if($.browser.msie && document.namespaces["v"] == null) {
     document.namespaces.add("v", "urn:schemas-microsoft-com:vml");
     var ss = document.createStyleSheet().owningElement;
-    ss.styleSheet.cssText = "v\\:*{behavior:url(#default#VML);}"
+    ss.styleSheet.cssText = "v\\:*{behavior:url(#default#VML);}";
   }
 
   $.fn.cornerz = function(options){
@@ -35,7 +35,7 @@ CHANGELIST from  v0.4
 	    else 
 		    {sa=p; sy=0; y=r; css+="bottom:-"+bw+"px;"; }
 	    if(l) 
-		    {ea=p*2; sx=r; x=0;	css+="left:-"+bw+"px;"}
+		    {ea=p*2; sx=r; x=0;	css+="left:-"+bw+"px;";}
 	    else 
 		    {ea=0; sx=0; x=r; css+="right:-"+bw+"px;";	}
 		
@@ -109,16 +109,16 @@ CHANGELIST from  v0.4
     $.extend(settings, options || {});
     
     var incrementProperty = function(elem, prop, x) {
-      var y = parseInt(elem.css(prop)) || 0 ;
+      var y = parseInt(elem.css(prop), 10) || 0 ;
       elem.css(prop, x+y);
-    }
+    };
     
     
     return this.each(function() {
       
       var $$ = $(this);
       var r = settings.radius*1.0;
-      var bw = (settings.borderWidth || parseInt($$.css("borderTopWidth")) || 0)*1.0;
+      var bw = (settings.borderWidth || parseInt($$.css("borderTopWidth"), 10) || 0)*1.0;
       var bg = settings.background;
       var bc = settings.borderColor;
       bc = bc || ( bw > 0 ? $$.css("borderTopColor") : bg);
@@ -158,9 +158,5 @@ CHANGELIST from  v0.4
       
     );
  
-  }
+  };
 })(jQuery);
-
-
-
-
