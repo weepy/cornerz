@@ -21,9 +21,7 @@ CHANGELIST from  v0.4
 ;(function($){
 
   if($.browser.msie && document.namespaces["v"] == null) {
-    document.namespaces.add("v", "urn:schemas-microsoft-com:vml");
-    var ss = document.createStyleSheet().owningElement;
-    ss.styleSheet.cssText = "v\\:*{behavior:url(#default#VML);}";
+    document.namespaces.add("v", "urn:schemas-microsoft-com:vml", "#default#VML");
   }
 
   $.fn.cornerz = function(options){
