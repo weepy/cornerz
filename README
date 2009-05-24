@@ -1,0 +1,44 @@
+Cornerz
+
+Bullet Proof Corners plugin for jQuery using Canvas/VML
+
+    * Bugs and especially fixes are most welcome!
+    * Contact : Jonah Fox (jonah@parkerfox.co.uk)
+
+Usage:
+
+$('.myclass').curve(options)
+
+options is a hash with the following parameters. Bracketed is the default
+
+    * radius (10)
+    * borderWidth (read from BorderTopWidth or 0)
+    * background ("white"). Note that this is not calculated from the HTML as it is expensive
+    * borderColor (read from BorderTopColor)
+    * corners ("tl br tr bl"). Specify which borders to draw
+    * fixIE (true). Attempt to fix odd(2n+1) dimensions in IE
+
+Why should you care?
+
+    * Antialiased
+    * Fast - this pages renders in 200ms on my Vaio in Firefox and there's quite a few corners!!
+    * Support for any size radius and border width with minimal performance increase
+    * No excanvas
+    * Current layout is maintained
+    * Works with many tested positions/display/floats (current limitation with inline)
+    * Supports fluid layouts.
+    * Original div still shows through, so can easily do hover effects
+    * Script is only 4.0k uncompressed
+    * Requires jQuery 1.2.6+
+    * Tested on :
+          o IE6 XP/Vista
+          o IE7 XP/Vista
+          o Firefox 2 Ubuntu/Windows
+          o Safari 3 Windows/Mac
+          o Opera 9 Windows/Linux
+          o Chrome
+
+      Limitations:
+          o Problem with some Inline elements in IE - due to incorrect reporting of width
+          o Update - the script now tries to fix this via the fixIE option
+
