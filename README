@@ -7,7 +7,7 @@ Bullet Proof Corners plugin for jQuery using Canvas/VML
 
 Usage:
 
-$('.myclass').curve(options)
+$('.myclass').cornerz(options)
 
 options is a hash with the following parameters. Bracketed is the default
 
