@@ -20,6 +20,7 @@ CHANGELIST from  v0.4
     
 ;(function($){
 
+if(typeof document.namespaces != 'undefined')
   if($.browser.msie && document.namespaces["v"] == null) {
     document.namespaces.add("v", "urn:schemas-microsoft-com:vml", "#default#VML");
   }
